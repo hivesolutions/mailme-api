@@ -39,16 +39,11 @@ __license__ = "GNU General Public License (GPL), Version 3"
 
 import appier
 
-from . import user
-
 BASE_URL = "https://mailme.bemisc.com/"
 """ The default base url to be used when no other
 base url value is provided to the constructor """
 
-class Api(
-    appier.Api,
-    user.UserApi
-):
+class Api(appier.Api):
     """
     Implementation of the Mailme API specification
     for a simplified python client usage.
