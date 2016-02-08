@@ -54,6 +54,11 @@ class Api(appier.Api):
         self.base_url = appier.conf("BASE_URL", BASE_URL)
         self.base_url = kwargs.get("base_url", BASE_URL)
 
+    def ping(self):
+        url = self.base_url + "ping"
+        contents = self.get(url)
+        return contents
+
     def send(self, payload):
         url = self.base_url + "send"
         contents = self.post(url, data_j = payload)
