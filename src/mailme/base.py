@@ -39,7 +39,7 @@ __license__ = "Apache License, Version 2.0"
 
 import appier
 
-BASE_URL = "https://mailme.bemisc.com/"
+BASE_URL = "https://mailme.bemisc.com/api/"
 """ The default base url to be used when no other
 base url value is provided to the constructor """
 
