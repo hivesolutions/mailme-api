@@ -39,22 +39,27 @@ __license__ = "Apache License, Version 2.0"
 
 import appier
 
-BASE_URL = "https://mailme.bemisc.com/"
-""" The default base url to be used when no other
-base url value is provided to the constructor """
+from . import base
 
-class Api(appier.Api):
-    """
-    Implementation of the Mailme API specification
-    for a simplified python client usage.
-    """
+class MailmeApp(appier.WebApp):
 
-    def __init__(self, *args, **kwargs):
-        appier.Api.__init__(self, *args, **kwargs)
-        self.base_url = appier.conf("BASE_URL", BASE_URL)
-        self.base_url = kwargs.get("base_url", BASE_URL)
+    def __init__(self):
+        appier.WebApp.__init__(self, name = "mailme")
 
-    def send(self, payload):
-        url = self.base_url + "send"
-        contents = self.post(url, data_j = payload)
-        return contents
+    @appier.route("/", "GET")
+    def index(self):
+        return self.ping()
+
+    @appier.route("/ping", "GET")
+    def ping(self):
+        api = self.get_api()
+        result = api.ping()
+        return result
+
+    def get_api(self):
+        api = base.get_api()
+        return api
+
+if __name__ == "__main__":
+    app = MailmeApp()
+    app.serve()

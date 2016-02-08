@@ -19,9 +19,6 @@
 # You should have received a copy of the Apache License along with
 # Hive Mailme API. If not, see <http://www.apache.org/licenses/>.
 
-__author__ = "João Magalhães <joamag@hive.pt>"
-""" The author(s) of the module """
-
 __version__ = "1.0.0"
 """ The version of the module """
 
@@ -37,24 +34,8 @@ __copyright__ = "Copyright (c) 2008-2016 Hive Solutions Lda."
 __license__ = "Apache License, Version 2.0"
 """ The license for the module """
 
-import appier
+from . import app
+from . import base
 
-BASE_URL = "https://mailme.bemisc.com/"
-""" The default base url to be used when no other
-base url value is provided to the constructor """
-
-class Api(appier.Api):
-    """
-    Implementation of the Mailme API specification
-    for a simplified python client usage.
-    """
-
-    def __init__(self, *args, **kwargs):
-        appier.Api.__init__(self, *args, **kwargs)
-        self.base_url = appier.conf("BASE_URL", BASE_URL)
-        self.base_url = kwargs.get("base_url", BASE_URL)
-
-    def send(self, payload):
-        url = self.base_url + "send"
-        contents = self.post(url, data_j = payload)
-        return contents
+from .app import MailmeApp
+from .base import get_api

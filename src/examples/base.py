@@ -37,24 +37,7 @@ __copyright__ = "Copyright (c) 2008-2016 Hive Solutions Lda."
 __license__ = "Apache License, Version 2.0"
 """ The license for the module """
 
-import appier
+import mailme
 
-BASE_URL = "https://mailme.bemisc.com/"
-""" The default base url to be used when no other
-base url value is provided to the constructor """
-
-class Api(appier.Api):
-    """
-    Implementation of the Mailme API specification
-    for a simplified python client usage.
-    """
-
-    def __init__(self, *args, **kwargs):
-        appier.Api.__init__(self, *args, **kwargs)
-        self.base_url = appier.conf("BASE_URL", BASE_URL)
-        self.base_url = kwargs.get("base_url", BASE_URL)
-
-    def send(self, payload):
-        url = self.base_url + "send"
-        contents = self.post(url, data_j = payload)
-        return contents
+def get_api():
+    return mailme.Api()
