@@ -51,12 +51,28 @@ class Api(appier.Api):
 
     def __init__(self, *args, **kwargs):
         appier.Api.__init__(self, *args, **kwargs)
-        self.base_url = appier.conf("BASE_URL", BASE_URL)
+        self.base_url = appier.conf("MAILME_BASE_URL", BASE_URL)
+        self.key = appier.conf("MAILME_KEY", None)
         self.base_url = kwargs.get("base_url", BASE_URL)
+
+    def build(
+        self,
+        method,
+        url,
+        data = None,
+        data_j = None,
+        data_m = None,
+        headers = None,
+        params = None,
+        mime = None,
+        kwargs = None
+    ):
+        auth = kwargs.pop("auth", True)
+        if auth and self.key: headers["X-Secret-Key"] = self.key 
 
     def ping(self):
         url = self.base_url + "ping"
-        contents = self.get(url)
+        contents = self.get(url, auth = False)
         return contents
 
     def send(self, payload):
