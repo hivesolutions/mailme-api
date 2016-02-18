@@ -47,12 +47,14 @@ def send(*args, **kwargs):
 if __name__ == "__main__":
     receivers = appier.conf("RECEIVERS", [], cast = list)
     subject = appier.conf("SUBJECT", None)
+    title = appier.conf("TITLE", None)
     contents = appier.conf("CONTENTS", None)
     copyright = appier.conf("COPYRIGHT", None)
 
     kwargs = dict()
     if receivers: kwargs["receivers"] = receivers
     if subject: kwargs["subject"] = subject
+    if title: kwargs["title"] = subject
     if contents: kwargs["contents"] = contents
     if copyright: kwargs["copyright"] = copyright
 
