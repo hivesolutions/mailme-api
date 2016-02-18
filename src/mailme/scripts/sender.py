@@ -54,7 +54,7 @@ if __name__ == "__main__":
     kwargs = dict()
     if receivers: kwargs["receivers"] = receivers
     if subject: kwargs["subject"] = subject
-    if title: kwargs["title"] = subject
+    if title: kwargs["title"] = title
     if contents: kwargs["contents"] = contents
     if copyright: kwargs["copyright"] = copyright
 
