@@ -51,7 +51,8 @@ setuptools.setup(
     url = "http://mailme_api.hive.pt",
     zip_safe = False,
     packages = [
-        "mailme"
+        "mailme",
+        "mailme.scripts"
     ],
     package_dir = {
         "" : os.path.normpath("src")
