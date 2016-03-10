@@ -37,7 +37,11 @@ __copyright__ = "Copyright (c) 2008-2016 Hive Solutions Lda."
 __license__ = "Apache License, Version 2.0"
 """ The license for the module """
 
+import appier
+
 import mailme
 
 def get_api():
-    return mailme.Api()
+    return mailme.Api(
+        key = appier.conf("MAILME_KEY")
+    )
