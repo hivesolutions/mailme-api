@@ -43,8 +43,12 @@ from . import base
 
 class MailmeApp(appier.WebApp):
 
-    def __init__(self):
-        appier.WebApp.__init__(self, name = "mailme")
+    def __init__(self, *args, **kwargs):
+        appier.WebApp.__init__(
+            self,
+            name = "mailme",
+            *args, **kwargs
+        )
 
     @appier.route("/", "GET")
     def index(self):
