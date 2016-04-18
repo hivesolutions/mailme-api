@@ -42,7 +42,7 @@ import mailme
 
 def send(*args, **kwargs):
     api = mailme.Api()
-    api.send(kwargs)
+    return api.send(kwargs)
 
 if __name__ == "__main__":
     receivers = appier.conf("RECEIVERS", [], cast = list)
