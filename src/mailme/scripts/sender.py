@@ -58,4 +58,5 @@ if __name__ == "__main__":
     if contents: kwargs["contents"] = contents
     if copyright: kwargs["copyright"] = copyright
 
-    send(**kwargs)
+    result = send(**kwargs)
+    print(result)
