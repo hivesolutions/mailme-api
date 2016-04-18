@@ -37,6 +37,8 @@ __copyright__ = "Copyright (c) 2008-2016 Hive Solutions Lda."
 __license__ = "Apache License, Version 2.0"
 """ The license for the module """
 
+import pprint
+
 import appier
 import mailme
 
@@ -59,4 +61,4 @@ if __name__ == "__main__":
     if copyright: kwargs["copyright"] = copyright
 
     result = send(**kwargs)
-    print(result)
+    pprint.pprint(result)
