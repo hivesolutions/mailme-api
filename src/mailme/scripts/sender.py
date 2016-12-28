@@ -62,3 +62,5 @@ if __name__ == "__main__":
 
     result = send(**kwargs)
     pprint.pprint(result)
+else:
+    __path__ = []
