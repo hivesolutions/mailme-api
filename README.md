@@ -1,4 +1,4 @@
-# [Mailme API](http://mailme_api.hive.pt)
+# [Mailme API](http://mailme-api.hive.pt)
 
 API Python client for the Mailme service.
 
