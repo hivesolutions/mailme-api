@@ -48,7 +48,7 @@ setuptools.setup(
     description = "Mailme API Client",
     license = "Apache License, Version 2.0",
     keywords = "mailme api",
-    url = "http://mailme_api.hive.pt",
+    url = "http://mailme-api.hive.pt",
     zip_safe = False,
     packages = [
         "mailme",
