@@ -42,6 +42,6 @@ import appier
 import mailme
 
 def get_api():
-    return mailme.Api(
+    return mailme.API(
         key = appier.conf("MAILME_KEY")
     )

@@ -43,7 +43,7 @@ import appier
 import mailme
 
 def send(*args, **kwargs):
-    api = mailme.Api()
+    api = mailme.API()
     return api.send(kwargs)
 
 if __name__ == "__main__":

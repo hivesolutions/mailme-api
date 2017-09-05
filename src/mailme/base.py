@@ -43,14 +43,14 @@ BASE_URL = "https://mailme.bemisc.com/api/"
 """ The default base url to be used when no other
 base url value is provided to the constructor """
 
-class Api(appier.Api):
+class API(appier.API):
     """
     Implementation of the Mailme API specification
     for a simplified python client usage.
     """
 
     def __init__(self, *args, **kwargs):
-        appier.Api.__init__(self, *args, **kwargs)
+        appier.API.__init__(self, *args, **kwargs)
         self.base_url = appier.conf("MAILME_BASE_URL", BASE_URL)
         self.key = appier.conf("MAILME_KEY", None)
         self.base_url = kwargs.get("base_url", BASE_URL)
