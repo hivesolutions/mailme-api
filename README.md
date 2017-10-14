@@ -7,6 +7,18 @@ API Python client for the Mailme service.
 * `MAILME_BASE_URL` (`str`) - The base URL for the Mailme API requests (defaults to `https://mailme.bemisc.com/api/`)
 * `MAILME_KEY` (`str`) - The secret key to be used to authenticate API requests (defaults to `None`)
 
+## Installation
+
+```bash
+pip install mailme_api
+```
+
+## Usage
+
+```bash
+RECEIVERS="receiver@domain.com" CONTENTS="Hello World" python -m mailme.scripts.sender
+```
+
 ## License
 
 Mailme API is currently licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/).
