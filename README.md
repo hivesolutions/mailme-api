@@ -16,7 +16,9 @@ pip install mailme_api
 ## Usage
 
 ```bash
-RECEIVERS="receiver@domain.com" CONTENTS="Hello World" python -m mailme.scripts.sender
+RECEIVERS="receiver@domain.com" \
+CONTENTS="Hello World" \
+python -m mailme.scripts.sender
 ```
 
 ## License
