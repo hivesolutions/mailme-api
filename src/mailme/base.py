@@ -41,7 +41,7 @@ import appier
 
 BASE_URL = "https://mailme.bemisc.com/api/"
 """ The default base URL to be used when no other
-base url value is provided to the constructor """
+base URL value is provided to the constructor """
 
 class API(appier.API):
     """
