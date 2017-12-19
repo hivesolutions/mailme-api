@@ -40,7 +40,7 @@ __license__ = "Apache License, Version 2.0"
 import appier
 
 BASE_URL = "https://mailme.bemisc.com/api/"
-""" The default base url to be used when no other
+""" The default base URL to be used when no other
 base url value is provided to the constructor """
 
 class API(appier.API):
@@ -53,7 +53,8 @@ class API(appier.API):
         appier.API.__init__(self, *args, **kwargs)
         self.base_url = appier.conf("MAILME_BASE_URL", BASE_URL)
         self.key = appier.conf("MAILME_KEY", None)
-        self.base_url = kwargs.get("base_url", BASE_URL)
+        self.base_url = kwargs.get("base_url", self.base_url)
+        self.key = appier.conf("key", self.key)
 
     def build(
         self,
