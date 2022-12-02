@@ -12,7 +12,7 @@ API Python client for the Mailme service.
 ## Installation
 
 ```bash
-pip install mailme_api
+pip install mailme-api
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ Mailme API is currently licensed under the [Apache License, Version 2.0](http://
 
 ## Build Automation
 
-[![Build Status](https://app.travis-ci.com/hivesolutions/mailme_api.svg?branch=master)](https://travis-ci.com/github/hivesolutions/mailme_api)
-[![Coverage Status](https://coveralls.io/repos/hivesolutions/mailme_api/badge.svg?branch=master)](https://coveralls.io/r/hivesolutions/mailme_api?branch=master)
-[![PyPi Status](https://img.shields.io/pypi/v/mailme_api.svg)](https://pypi.python.org/pypi/mailme_api)
+[![Build Status](https://app.travis-ci.com/hivesolutions/mailme-api.svg?branch=master)](https://travis-ci.com/github/hivesolutions/mailme-api)
+[![Coverage Status](https://coveralls.io/repos/hivesolutions/mailme-api/badge.svg?branch=master)](https://coveralls.io/r/hivesolutions/mailme-api?branch=master)
+[![PyPi Status](https://img.shields.io/pypi/v/mailme-api.svg)](https://pypi.python.org/pypi/mailme-api)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/)

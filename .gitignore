@@ -5,4 +5,4 @@ session.shelve*
 
 /dist
 /build
-/src/mailme_api.egg-info
+/src/mailme-api.egg-info
