@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 * Sanitization of the code structure, making compliant with `black`
+* Improved support for type hints
 
 ### Fixed
 
