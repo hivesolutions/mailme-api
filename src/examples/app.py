@@ -22,15 +22,6 @@
 __author__ = "João Magalhães <joamag@hive.pt>"
 """ The author(s) of the module """
 
-__version__ = "1.0.0"
-""" The version of the module """
-
-__revision__ = "$LastChangedRevision$"
-""" The revision number of the module """
-
-__date__ = "$LastChangedDate$"
-""" The last change date of the module """
-
 __copyright__ = "Copyright (c) 2008-2020 Hive Solutions Lda."
 """ The copyright for the module """
 
@@ -41,14 +32,11 @@ import appier
 
 from . import base
 
+
 class MailmeApp(appier.WebApp):
 
     def __init__(self, *args, **kwargs):
-        appier.WebApp.__init__(
-            self,
-            name = "mailme",
-            *args, **kwargs
-        )
+        appier.WebApp.__init__(self, name="mailme", *args, **kwargs)
 
     @appier.route("/", "GET")
     def index(self):
@@ -62,17 +50,17 @@ class MailmeApp(appier.WebApp):
 
     @appier.route("/send", "GET")
     def send(self):
-        receivers = self.field("receivers", [], cast = list)
+        receivers = self.field("receivers", [], cast=list)
         subject = self.field("subject", "Test email")
         title = self.field("title", "Test email")
         contents = self.field("contents", "Test email")
         copyright = self.field("copyright", "Hive Solutions")
         payload = dict(
-            receivers = receivers,
-            subject = subject,
-            title = title,
-            contents = contents,
-            copyright = copyright
+            receivers=receivers,
+            subject=subject,
+            title=title,
+            contents=contents,
+            copyright=copyright,
         )
         api = self.get_api()
         result = api.send(payload)
@@ -81,6 +69,7 @@ class MailmeApp(appier.WebApp):
     def get_api(self):
         api = base.get_api()
         return api
+
 
 if __name__ == "__main__":
     app = MailmeApp()

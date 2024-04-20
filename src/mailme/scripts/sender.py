@@ -22,15 +22,6 @@
 __author__ = "João Magalhães <joamag@hive.pt>"
 """ The author(s) of the module """
 
-__version__ = "1.0.0"
-""" The version of the module """
-
-__revision__ = "$LastChangedRevision$"
-""" The revision number of the module """
-
-__date__ = "$LastChangedDate$"
-""" The last change date of the module """
-
 __copyright__ = "Copyright (c) 2008-2020 Hive Solutions Lda."
 """ The copyright for the module """
 
@@ -42,23 +33,30 @@ import pprint
 import appier
 import mailme
 
+
 def send(*args, **kwargs):
     api = mailme.API()
     return api.send(kwargs)
 
+
 if __name__ == "__main__":
-    receivers = appier.conf("RECEIVERS", [], cast = list)
+    receivers = appier.conf("RECEIVERS", [], cast=list)
     subject = appier.conf("SUBJECT", None)
     title = appier.conf("TITLE", None)
     contents = appier.conf("CONTENTS", None)
     copyright = appier.conf("COPYRIGHT", None)
 
     kwargs = dict()
-    if receivers: kwargs["receivers"] = receivers
-    if subject: kwargs["subject"] = subject
-    if title: kwargs["title"] = title
-    if contents: kwargs["contents"] = contents
-    if copyright: kwargs["copyright"] = copyright
+    if receivers:
+        kwargs["receivers"] = receivers
+    if subject:
+        kwargs["subject"] = subject
+    if title:
+        kwargs["title"] = title
+    if contents:
+        kwargs["contents"] = contents
+    if copyright:
+        kwargs["copyright"] = copyright
 
     result = send(**kwargs)
     pprint.pprint(result)

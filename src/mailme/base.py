@@ -22,15 +22,6 @@
 __author__ = "João Magalhães <joamag@hive.pt>"
 """ The author(s) of the module """
 
-__version__ = "1.0.0"
-""" The version of the module """
-
-__revision__ = "$LastChangedRevision$"
-""" The revision number of the module """
-
-__date__ = "$LastChangedDate$"
-""" The last change date of the module """
-
 __copyright__ = "Copyright (c) 2008-2020 Hive Solutions Lda."
 """ The copyright for the module """
 
@@ -42,6 +33,7 @@ import appier
 BASE_URL = "https://mailme.bemisc.com/api/"
 """ The default base URL to be used when no other
 base URL value is provided to the constructor """
+
 
 class API(appier.API):
     """
@@ -60,23 +52,24 @@ class API(appier.API):
         self,
         method,
         url,
-        data = None,
-        data_j = None,
-        data_m = None,
-        headers = None,
-        params = None,
-        mime = None,
-        kwargs = None
+        data=None,
+        data_j=None,
+        data_m=None,
+        headers=None,
+        params=None,
+        mime=None,
+        kwargs=None,
     ):
         auth = kwargs.pop("auth", True)
-        if auth and self.key: headers["X-Secret-Key"] = self.key
+        if auth and self.key:
+            headers["X-Secret-Key"] = self.key
 
     def ping(self):
         url = self.base_url + "ping"
-        contents = self.get(url, auth = False)
+        contents = self.get(url, auth=False)
         return contents
 
     def send(self, payload):
         url = self.base_url + "send"
-        contents = self.post(url, data_j = payload)
+        contents = self.post(url, data_j=payload)
         return contents
