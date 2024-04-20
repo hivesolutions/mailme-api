@@ -73,3 +73,19 @@ class API(appier.API):
         url = self.base_url + "send"
         contents = self.post(url, data_j=payload)
         return contents
+
+
+class Attachment(dict):
+    pass
+
+
+class AttachmentPayload(dict):
+    pass
+
+
+class Message(dict):
+    pass
+
+
+class MessagePayload(dict):
+    pass
