@@ -76,6 +76,9 @@ class MessagePayload(TypedDict):
     contents: NotRequired[str]
     copyright: NotRequired[str]
     attachments: NotRequired[Sequence[AttachmentPayload]]
+    inline: NotRequired[bool]
+    style: NotRequired[str]
+    mode: NotRequired[str]
 
 class API(BaseAPI):
     def send(self, payload: MessagePayload) -> Message: ...
