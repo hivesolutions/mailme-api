@@ -61,6 +61,8 @@ class Message(TypedDict):
     title: str
     subtitle: str | None
     contents: str
+    html: str
+    plain: str
     copyright: str
     logo_url: str | None
     attachments: Sequence[Attachment]
@@ -74,6 +76,8 @@ class MessagePayload(TypedDict):
     subject: NotRequired[str]
     title: NotRequired[str]
     contents: NotRequired[str]
+    html: NotRequired[str]
+    plain: NotRequired[str]
     copyright: NotRequired[str]
     attachments: NotRequired[Sequence[AttachmentPayload]]
     inline: NotRequired[bool]
