@@ -13,11 +13,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-* Direct inclusion of pyi files in `setup.py`
+*
 
 ### Fixed
 
 *
+
+## [0.2.1] - 2024-04-30
+
+### Changed
+
+* Direct inclusion of pyi files in `setup.py`
 
 ## [0.2.0] - 2024-04-20
 
