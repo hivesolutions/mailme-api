@@ -4,10 +4,10 @@ API Python client for the Mailme service.
 
 ## Configuration
 
-| Name | Type | Description |
-| ----- | ----- | ----- |
-| **MAILME_BASE_URL** | `str` | The base URL for the Mailme API requests (defaults to `https://mailme.bemisc.com/api/`). |
-| **MAILME_KEY** | `str` |  The secret key to be used to authenticate API requests (defaults to `None`). |
+| Name                | Type  | Default                          | Description                                             |
+| ------------------- | ----- | -------------------------------- | ------------------------------------------------------- |
+| **MAILME_BASE_URL** | `str` | `https://mailme.bemisc.com/api/` | The base URL for the Mailme API requests.               |
+| **MAILME_KEY**      | `str` | `None`                           | The secret key to be used to authenticate API requests. |
 
 ## Installation
 
