@@ -42,6 +42,7 @@ setuptools.setup(
     url="http://mailme-api.hive.pt",
     zip_safe=False,
     packages=["mailme", "mailme.scripts"],
+    test_suite="mailme.test",
     package_dir={"": os.path.normpath("src")},
     package_data={"mailme": ["*.pyi"]},
     install_requires=["appier"],
