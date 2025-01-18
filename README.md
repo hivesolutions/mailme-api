@@ -1,6 +1,26 @@
 # [Mailme API](http://mailme-api.hive.pt)
 
-API Python client for the Mailme service.
+**Mailme API is a Python client library that provides a simple and convenient interface for interacting with the Mailme email gateway service.** With this client, developers can seamlessly send emails, manage recipients, and integrate [Mailme](http://mailme-api.hive.pt) into their Python-based applications with minimal setup.
+
+## Description
+
+Mailme API simplifies the process of sending emails programmatically by offering a Python-based interface to the [Mailme service](http://mailme-api.hive.pt). It abstracts the underlying HTTP API into a Pythonic syntax, making it easier to implement and integrate email-sending functionality into your projects.
+
+The library supports key features of the Mailme service, such as:
+
+- **Authentication**: Secure your requests with a secret API key.
+- **Customizable Email Content**: Define recipients, subject lines, and HTML or plain text email content.
+- **Environment Variable Configuration**: Easily manage settings through environment variables for flexibility across different deployment environments.
+- **Streamlined Email Sending**: Quickly send emails with minimal boilerplate code.
+
+This API client is particularly useful for Python developers who need a reliable way to send notifications, reports, or other automated emails without diving into the complexities of SMTP servers or manual REST API calls.
+
+### Key Benefits
+
+- **Ease of Use**: A straightforward interface for sending emails with a few lines of code.
+- **Flexibility**: Supports customizable email parameters, including multiple recipients and formatted content.
+- **Seamless Integration**: Designed to fit naturally into Python applications and scripts.
+- **Open Source**: Fully open-sourced under the Apache License 2.0, encouraging collaboration and contributions.
 
 ## Configuration
 
