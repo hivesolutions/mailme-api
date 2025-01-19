@@ -27,4 +27,12 @@ __license__ = "Apache License, Version 2.0"
 
 from . import base
 
-from .base import BASE_URL, API, Ping, Attachment, AttachmentPayload, Message, MessagePayload
+from .base import (
+    BASE_URL,
+    API,
+    Ping,
+    Attachment,
+    AttachmentPayload,
+    Message,
+    MessagePayload,
+)
