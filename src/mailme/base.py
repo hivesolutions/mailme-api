@@ -75,6 +75,10 @@ class API(appier.API):
         return contents
 
 
+class Ping(dict):
+    pass
+
+
 class Attachment(dict):
     pass
 
