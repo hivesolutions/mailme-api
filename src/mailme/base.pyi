@@ -3,6 +3,9 @@ from appier import API as BaseAPI
 
 BASE_URL: str = ...
 
+class Ping(TypedDict):
+    time: float
+
 class Attachment(TypedDict):
     name: str
     data: str
@@ -55,4 +58,5 @@ class MessagePayload(TypedDict):
     mode: NotRequired[str]
 
 class API(BaseAPI):
+    def ping(self) -> Ping: ...
     def send(self, payload: MessagePayload) -> Message: ...
