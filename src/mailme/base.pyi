@@ -45,6 +45,7 @@ class Message(TypedDict):
     mode: str
 
 class MessagePayload(TypedDict):
+    sender: NotRequired[str]
     receivers: Sequence[str]
     subject: NotRequired[str]
     title: NotRequired[str]
