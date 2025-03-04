@@ -42,6 +42,7 @@ class Message(TypedDict):
     id: str | None
     inline: bool
     style: str
+    style_css: str
     mode: str
 
 class MessagePayload(TypedDict):
@@ -56,6 +57,7 @@ class MessagePayload(TypedDict):
     attachments: NotRequired[Sequence[AttachmentPayload]]
     inline: NotRequired[bool]
     style: NotRequired[str]
+    style_css: NotRequired[str]
     mode: NotRequired[str]
 
 class API(BaseAPI):
