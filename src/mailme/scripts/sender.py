@@ -45,6 +45,7 @@ if __name__ == "__main__":
     title = appier.conf("TITLE", None)
     contents = appier.conf("CONTENTS", None)
     copyright = appier.conf("COPYRIGHT", None)
+    mode = appier.conf("MODE", None)
 
     kwargs = dict()
     if receivers:
@@ -57,6 +58,8 @@ if __name__ == "__main__":
         kwargs["contents"] = contents
     if copyright:
         kwargs["copyright"] = copyright
+    if mode:
+        kwargs["mode"] = mode
 
     result = send(**kwargs)
     pprint.pprint(result)

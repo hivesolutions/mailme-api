@@ -1,4 +1,4 @@
-from typing import NotRequired, Sequence, TypedDict
+from typing import Literal, NotRequired, Sequence, TypedDict
 from appier import API as BaseAPI
 
 BASE_URL: str = ...
@@ -43,7 +43,7 @@ class Message(TypedDict):
     inline: bool
     style: str
     style_css: str
-    mode: str
+    mode: Literal["markdown", "html", "auto"]
 
 class MessagePayload(TypedDict):
     sender: NotRequired[str]
@@ -58,7 +58,7 @@ class MessagePayload(TypedDict):
     inline: NotRequired[bool]
     style: NotRequired[str]
     style_css: NotRequired[str]
-    mode: NotRequired[str]
+    mode: NotRequired[Literal["markdown", "html", "auto"]]
 
 class API(BaseAPI):
     def ping(self) -> Ping: ...
