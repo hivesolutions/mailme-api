@@ -9,11 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-*
+* Support for `MODE` configuration in the sender script
+* Python 3.13 and 3.14 to the CI build matrix
 
 ### Changed
 
-*
+* Narrowed the `mode` field type to `Literal["markdown", "html", "auto"]`
+* Bumped `actions/checkout` to v6 in CI workflows
+* Switched the deploy workflow to build distributions with `python -m build`
 
 ### Fixed
 
